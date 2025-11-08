@@ -1,7 +1,8 @@
+This repository was part of the assignment for Risk Analysis course in Business Intelligence master program.
 
 ## **1. Problem Introduction**
 
-This report combines **Problem 1** and **Problem 2** of the Home Assignment to analyze and compare two approaches for modeling stock price evolution and portfolio risk:
+This report combines **Problem 1** and **Problem 2** to analyze and compare two approaches for modeling stock price evolution and portfolio risk:
 
 * **Problem 1:** A baseline *constant-variance Monte Carlo simulation* assuming i.i.d. normal log-returns.
 * **Problem 2:** An advanced *time-varying volatility simulation* using **J.P. Morgan’s RiskMetrics** model to incorporate volatility clustering.
