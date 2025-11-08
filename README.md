@@ -76,7 +76,7 @@ def compute_log_return(hist_data):
     log_returns.dropna(inplace=True)
     return log_returns
 ```
-<img width="1189" height="490" alt="step2" src="https://github.com/user-attachments/assets/2a27d295-511a-4e21-a3f2-db5aac693786" />
+<img width="1189" height="490" alt="step2" src="https://github.com/user-attachments/assets/a907e6f0-c892-49a7-ae5d-294d5d12049c" />
 
 **Inference:**
 <br>For Intel and SSAB, variance differences already indicated that SSAB is the riskier asset, likely due to smaller market capitalization and currency sensitivity.
@@ -110,7 +110,7 @@ def compute_norm_parameters(data):
 | Intel |  0.000467 | 0.000329 |           0.018148 |
 |  SSAB | -0.000436 | 0.000715 |           0.026747 |
 
-<img width="1189" height="490" alt="step3" src="https://github.com/user-attachments/assets/fb604135-e826-41c9-ab92-e7a3ca739188" />
+<img width="1189" height="490" alt="step3" src="https://github.com/user-attachments/assets/990c13bb-4848-4fc0-b2f9-455feca94077" />
 
 **Inference:**
 - Intel’s positive mean reflects a slight upward drift over the decade, whereas SSAB’s negative mean shows long-term stagnation or cyclical performance. The variance of SSAB returns is more than double that of Intel, consistent with the earlier discussion on foreign-exchange risk.
@@ -144,7 +144,7 @@ def simulate_closing_price(initial_price, mean, var, number_of_trading_days=252*
 - 	Each subsequent day’s price is calculated as: $X_t = X_{t-1} \times e^{R_t}$
 - The function uses a fixed random seed to ensure reproducibility of the simulation results.
 
-<img width="1189" height="989" alt="1pricepath1" src="https://github.com/user-attachments/assets/3c566426-8ef3-4b25-9fb8-1f6c0f14ef3f" />
+<img width="1189" height="989" alt="1pricepath1" src="https://github.com/user-attachments/assets/d9632242-44c1-4902-a1e9-f6f2c87293d4" />
 
 **Inference:**
 - **Intel:** This divergence indicates an upward drift bias in the model—caused by using the long-run historical mean return $(\mu>0)$ estimated from a bullish decade (2011–2020).
@@ -182,7 +182,7 @@ def simulate_morgan_closing_price(initial_price, mean, initial_var, number_of_tr
     return variances, log_returns, prices
 ```
 
-<img width="1189" height="989" alt="1pricepath2" src="https://github.com/user-attachments/assets/5f066511-6b36-470a-9b09-5a3f153353ae" />
+<img width="1189" height="989" alt="1pricepath2" src="https://github.com/user-attachments/assets/5255dc5d-6967-4ec2-b759-744fd97d72c2" />
 
 **Inference:**
 <br>This structure captures volatility persistence, allowing shocks in returns to have prolonged effects on future variance. However, since the model assumes normal innovations, extreme market events are understated.
@@ -229,7 +229,7 @@ def simulate_ending_price(initial_price, mean, initial_var, number_of_trading_da
 |   75% |            115.26 |              2.92 |           1283.42 |            560.90 |         1844.31 |
 |   max |            669.66 |             39.05 |           7456.78 |           7501.90 |        14958.69 |
 
-<img width="1490" height="490" alt="output1" src="https://github.com/user-attachments/assets/33df4873-fd19-4172-8a0f-b85952ab898f" />
+<img width="1490" height="490" alt="output1" src="https://github.com/user-attachments/assets/516484dc-d8e4-490f-8116-f04f934434be" />
 
 **Inference:**
 - The long right tail shows that extreme positive outcomes are possible, but with very low probability.
@@ -248,7 +248,7 @@ def simulate_ending_price(initial_price, mean, initial_var, number_of_trading_da
 |   75% |             97.20 |              2.28 |           1082.33 |      4.377700e+02 |    1.521610e+03 |
 |   max |        4097694.86 |        5463155.06 |       45628363.29 |      1.049514e+09 |    1.095142e+09 |
 
-<img width="1489" height="490" alt="output2" src="https://github.com/user-attachments/assets/c05eeee9-b9cd-4c31-ade3-f0a1b0929f3d" />
+<img width="1489" height="490" alt="output2" src="https://github.com/user-attachments/assets/1ed535d6-9cb9-4b45-9bab-d9fd6a5cf400" />
 
 #### **Inference:**
 - The mean is much larger than the median, confirming the presence of right-skewed distributions with large outliers.
